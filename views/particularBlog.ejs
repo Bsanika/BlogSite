@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+<%- include("partials/navbar.ejs") %>
+
+<div class="container mt-5">
+    <% if (blog) { %>
+        <p class="text-muted">published at: <%= blog.postedAt %></p>
+        <h2><%= blog.title %></h2>
+        <p class="mt-5"><%= blog.content %></p>
+    <% } else { %>
+        <p>Blog not found</p>
+    <% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>
